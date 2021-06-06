@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script>
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    var Loader = new THREE.OBJLoader();
+    var light = new THREE.AmbientLight(0xff0000, 1, 100);
+    light.position.set(50, 50, 50);
+    scene.add(light);
+    scene.background = new THREE.Color('black');
+    Loader.load("/assets/object.obj", (object) => {
+        scene.add(object);
+        object.rotation.x = 5.0;
+        object.rotation.y = 5.0;
+        camera.rotation.z = 300.0;
+        renderer.render(scene, camera);
+    });
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+    //scene.add(cube);
+
+    camera.position.z = 5;
+
+</script>
