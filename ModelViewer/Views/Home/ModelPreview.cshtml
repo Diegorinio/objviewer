@@ -7,7 +7,8 @@
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     var Loader = new THREE.OBJLoader();
-    var light = new THREE.AmbientLight(0x404040);
+    const light = new THREE.PointLight( 0xffffff, 4, 90 );
+    light.position.set(50, 50, 50);
     scene.add(light);
     let obj;
     let mouseX, mouseY;

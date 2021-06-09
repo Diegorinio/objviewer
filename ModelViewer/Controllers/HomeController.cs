@@ -31,11 +31,6 @@ namespace ModelViewer.Controllers
             return View();
         }
 
-        protected void SaveFile(object sender, EventArgs e)
-        {
-            string content = Request.Form["file-content"];
-
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
