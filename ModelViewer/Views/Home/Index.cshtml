@@ -1,27 +1,50 @@
-﻿
+﻿@using System.IO;
+@using System.Web;
 @{
-    ViewBag.Title = "Index";
+    ViewData["Title"] = "Model Viewer";
+    string[] filesPath = Directory.GetFiles("wwwroot/assets/");
 }
+<div class="viewer">
+    @{
+        foreach (string file in filesPath)
+        {
+            string fileName = file.Replace("wwwroot/assets/", "");
+            <div class="file-icon" onclick="renderIcon(this, '@file')">@fileName
+                <a class="file-preview-btn" asp-action="ModelPreview" asp-route-objectname="@fileName">Zobacz</a>
+    </div>
+        }
+    }
+</div>
 <script>
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    var Loader = new THREE.OBJLoader();
-    var light = new THREE.AmbientLight(0xff0000, 1, 100);
-    light.position.set(50, 50, 50);
-    scene.add(light);
-    scene.background = new THREE.Color('black');
-    Loader.load("/assets/object.obj", (object) => {
-        scene.add(object);
-        object.rotation.x = 5.0;
-        object.rotation.y = 5.0;
-        camera.rotation.z = 300.0;
-        renderer.render(scene, camera);
-    });
-    var renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-    //scene.add(cube);
-
-    camera.position.z = 5;
-
+    renderIcon = (target, filedir) => {
+            if(document.querySelectorAll(".icon-canvas").length > 0)
+            {
+                document.querySelectorAll(".icon-canvas").forEach(el =>{
+                    el.remove();
+                })
+            }
+        filedir = filedir.replace("wwwroot", "");
+        console.log(filedir);
+        let canvas = document.createElement("canvas");
+        canvas.className = "icon-canvas";
+        canvas.setAttribute("width", "100px");
+        canvas.setAttribute("height", "100px");
+        target.appendChild(canvas);
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(90, 1, 1, 100);
+        camera.updateProjectionMatrix();
+        var Loader = new THREE.OBJLoader();
+        var light = new THREE.AmbientLight(0x404040);
+        scene.add(light);
+        scene.background = new THREE.Color('black');
+        var render = new THREE.WebGLRenderer({canvas: canvas});
+        render.setSize(canvas.width, canvas.height);
+        Loader.load(filedir, (object)=>{
+            scene.add(object);
+            object.position.set(0,0,0);
+            object.rotation.set(15,10,0);
+            camera.position.z = 4;
+            render.render(scene, camera);
+        })
+    }
 </script>

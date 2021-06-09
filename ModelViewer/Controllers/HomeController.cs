@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ModelViewer.Controllers
+namespace test.Controllers
 {
     public class HomeController : Controller
     {
@@ -25,6 +25,12 @@ namespace ModelViewer.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+
+        public IActionResult ModelPreview(string objectname)
+        {
+            ViewData["object"] = objectname;
             return View();
         }
 

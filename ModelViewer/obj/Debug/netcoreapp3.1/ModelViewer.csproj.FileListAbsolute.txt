@@ -35,9 +35,9 @@ C:\Users\zbysl\source\repos\ModelViewer\ModelViewer\obj\Debug\netcoreapp3.1\Mode
 C:\Users\zbysl\source\repos\ModelViewer\ModelViewer\obj\Debug\netcoreapp3.1\ModelViewer.pdb
 C:\Users\zbysl\source\repos\ModelViewer\ModelViewer\obj\Debug\netcoreapp3.1\ModelViewer.genruntimeconfig.cache
 C:\Users\zbysl\source\repos\ModelViewer\ModelViewer\obj\Debug\netcoreapp3.1\ModelViewer.csproj.CopyComplete
-C:\Users\zbysl\source\repos\ModelViewer\ModelViewer\obj\Debug\netcoreapp3.1\Razor\Views\Home\Renderer.cshtml.g.cs
 C:\Users\zbysl\source\repos\ModelViewer\ModelViewer\bin\Debug\netcoreapp3.1\web.config
 C:\Users\zbysl\source\repos\ModelViewer\ModelViewer\bin\Debug\netcoreapp3.1\Properties\web.config
 C:\Users\zbysl\source\repos\ModelViewer\ModelViewer\obj\Debug\netcoreapp3.1\ModelViewer.Properties.Resources.resources
 C:\Users\zbysl\source\repos\ModelViewer\ModelViewer\obj\Debug\netcoreapp3.1\ModelViewer.csproj.GenerateResource.cache
 C:\Users\zbysl\source\repos\ModelViewer\ModelViewer\bin\Debug\netcoreapp3.1\wwwroot\Web.config
+C:\Users\zbysl\source\repos\ModelViewer\ModelViewer\obj\Debug\netcoreapp3.1\Razor\Views\Home\ModelPreview.cshtml.g.cs

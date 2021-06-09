@@ -9,6 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\assets\object.obj" />
+    <None Include="wwwroot\assets\sphere.obj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
