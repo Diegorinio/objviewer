@@ -7,17 +7,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace test.Controllers
+namespace ModelViewer.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
             return View();
@@ -32,6 +25,16 @@ namespace test.Controllers
         {
             ViewData["object"] = objectname;
             return View();
+        }
+        public IActionResult FileUploader()
+        {
+            return View();
+        }
+
+        protected void SaveFile(object sender, EventArgs e)
+        {
+            string content = Request.Form["file-content"];
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

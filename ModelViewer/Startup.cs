@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
+using Microsoft.Extensions.FileProviders;
 
 namespace ModelViewer
 {
@@ -34,8 +35,11 @@ namespace ModelViewer
             provider.Mappings.Add(".obj", "text/json");
             app.UseStaticFiles(new StaticFileOptions
             {
-                ContentTypeProvider = provider
-            });
+                ContentTypeProvider = provider,
+                FileProvider = new PhysicalFileProvider(
+            Path.Combine(env.ContentRootPath, "Assets")),
+                RequestPath = "/assets"
+            });;
 
             if (env.IsDevelopment())
             {

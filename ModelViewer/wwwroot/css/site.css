@@ -9,6 +9,11 @@
     background-color: aliceblue;
     width: 30vw;
     margin-bottom: 5px;
+    cursor:pointer;
+}
+.file-icon:hover
+{
+    background-color: rgb(221, 238, 253);
 }
 .viewer
 {
@@ -18,4 +23,40 @@
 .file-preview-btn
 {
     float: right;
+    text-decoration: none;
+    background-color: rgb(161, 255, 255);
+    padding: 5px;
+
+}
+.file-preview-btn:hover
+{
+    background-color: rgb(182, 255, 255);
+}
+.file-preview-btn:visited
+{
+    text-decoration:none;
+    color:black;
+}
+.menu, .menu:visited
+{
+    text-decoration: none;
+    padding: 14px;
+    background-color: aqua;
+    color: red;
+}
+
+.menu:hover {
+        background-color: rgb(182, 255, 255);
+}
+#Uploader
+{
+    display: block;
+}
+
+#Button1
+{
+    display: block;
+    background-color: black;
+    width: 100px;
+
 }

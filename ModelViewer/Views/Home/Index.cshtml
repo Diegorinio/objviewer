@@ -1,14 +1,14 @@
 ﻿@using System.IO;
-@using System.Web;
 @{
     ViewData["Title"] = "Model Viewer";
-    string[] filesPath = Directory.GetFiles("wwwroot/assets/");
+    string[] filesPath = Directory.GetFiles("assets/");
+    
 }
 <div class="viewer">
     @{
         foreach (string file in filesPath)
         {
-            string fileName = file.Replace("wwwroot/assets/", "");
+            string fileName = file.Replace("assets/", "");
             <div class="file-icon" onclick="renderIcon(this, '@file')">@fileName
                 <a class="file-preview-btn" asp-action="ModelPreview" asp-route-objectname="@fileName">Zobacz</a>
     </div>
@@ -27,8 +27,8 @@
         console.log(filedir);
         let canvas = document.createElement("canvas");
         canvas.className = "icon-canvas";
-        canvas.setAttribute("width", "100px");
-        canvas.setAttribute("height", "100px");
+        canvas.setAttribute("width", "150px");
+        canvas.setAttribute("height", "150px");
         target.appendChild(canvas);
         var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera(90, 1, 1, 100);
@@ -36,14 +36,14 @@
         var Loader = new THREE.OBJLoader();
         var light = new THREE.AmbientLight(0x404040);
         scene.add(light);
-        scene.background = new THREE.Color('black');
-        var render = new THREE.WebGLRenderer({canvas: canvas});
+        var render = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
+        render.setClearColor(0x000000, 0);
         render.setSize(canvas.width, canvas.height);
         Loader.load(filedir, (object)=>{
             scene.add(object);
             object.position.set(0,0,0);
-            object.rotation.set(15,10,0);
-            camera.position.z = 4;
+            object.rotation.set(0, 10, 0);
+            camera.position.z = 6;
             render.render(scene, camera);
         })
     }
