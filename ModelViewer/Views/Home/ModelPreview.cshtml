@@ -9,7 +9,11 @@
     var Loader = new THREE.OBJLoader();
     var light = new THREE.AmbientLight(0x404040);
     scene.add(light);
-    var obj;
+    let obj;
+    let mouseX, mouseY;
+    let deltaX=0;
+    let deltaY=0;
+    let isDown;
     Loader.load(`/assets/@ViewData["object"]`, (object) => {
         obj = object;
         scene.add(obj);
@@ -21,13 +25,36 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.antialias = true;
     document.body.appendChild(renderer.domElement);
-
     camera.position.z = 12;
+    document.addEventListener('mousemove',(e)=>{
+        if(!isDown)
+            return;
+        
+        e.preventDefault();
+        deltaX = e.clientX - mouseX;
+        deltaY = e.clientY - mouseY;
+        mouseX = e.clientX;
+        mouseY = e.clientY;
 
+    });
+    document.addEventListener('mousedown',(e)=>{
+        e.preventDefault();
+        isDown = true;
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+    document.addEventListener('mouseup',(e)=>{
+        e.preventDefault();
+        isDown = false;
+        deltaX = 0;
+        deltaY = 0;
+        mouseY = 0;
+        mouseX = 0;
+    });
     var render = () =>{
         requestAnimationFrame(render);
-        obj.rotation.y += 0.02;
-        obj.rotation.x +=0.01;
+        obj.rotation.y += deltaX/100;
+        obj.rotation.x += deltaY/100;
         renderer.render(scene, camera);
     }
 </script>
