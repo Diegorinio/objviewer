@@ -1,10 +1,14 @@
 ﻿@using System.IO;
 @{
-    ViewData["Title"] = "Model Viewer";
+    ViewData["Title"] = "Obj Model Viewer";
     string[] filesPath = Directory.GetFiles("assets/");
     
 }
 <h3 class='info'>Place .obj file inside "assets" folder</h3>
+<form asp-controller="Home" asp-action="AddModel" method="post" enctype="multipart/form-data">
+    <input class="form-control" type="file" name="file" accept=".obj"/>
+    <input type="submit" value="Dodaj Model" class="btn-file-save">
+</form>
 <div class="viewer">
     @{
         foreach (string file in filesPath)

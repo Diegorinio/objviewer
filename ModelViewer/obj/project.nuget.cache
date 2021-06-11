@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "yp+qSkF+5VVz+4VCLwGA11/iw9+VyCJq0aGIQRmGxFEcBTbE5mzuiyzjqe542rSxBuE+j/pZu0U6mAVmSJcbWg==",
+  "dgSpecHash": "BZGR3KuAo6k4YcUJcElqK0pDuGXvBMMh72x8A0hmjjlvYa+m7Ja9YZIiJt1JF2EeTJlkuulzJYv+PoKzMIT/Ew==",
   "success": true,
   "projectFilePath": "C:\\Users\\zbysl\\source\\repos\\ModelViewer\\ModelViewer\\ModelViewer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\zbysl\\.nuget\\packages\\grpc.core\\2.38.0\\grpc.core.2.38.0.nupkg.sha512",
+    "C:\\Users\\zbysl\\.nuget\\packages\\grpc.core.api\\2.38.0\\grpc.core.api.2.38.0.nupkg.sha512",
+    "C:\\Users\\zbysl\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }

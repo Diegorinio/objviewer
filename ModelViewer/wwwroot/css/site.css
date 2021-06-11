@@ -7,7 +7,7 @@
 {
     padding:  22px;
     background-color: aliceblue;
-    width: 30vw;
+    width: auto;
     margin-bottom: 5px;
     cursor:pointer;
 }
@@ -48,15 +48,14 @@
 .menu:hover {
         background-color: rgb(182, 255, 255);
 }
-#Uploader
+
+.btn-file-save
 {
-    display: block;
+    background-color:lawngreen;
+    padding:5px;
+    color:white;
 }
-
-#Button1
+.btn-file-save
 {
-    display: block;
-    background-color: black;
-    width: 100px;
-
+    background-color:greenyellow;
 }
