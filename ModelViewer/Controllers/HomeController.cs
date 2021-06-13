@@ -18,18 +18,9 @@ namespace ModelViewer.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         public IActionResult ModelPreview(string objectname)
         {
             ViewData["object"] = objectname;
-            return View();
-        }
-        public IActionResult FileUploader()
-        {
             return View();
         }
 
