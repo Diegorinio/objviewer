@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zbysl\\source\\repos\\ModelViewer\\ModelViewer\\ModelViewer.csproj": {}
+    "c:\\Users\\zbysl\\source\\repos\\ModelViewer\\ModelViewer\\ModelViewer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zbysl\\source\\repos\\ModelViewer\\ModelViewer\\ModelViewer.csproj": {
+    "c:\\Users\\zbysl\\source\\repos\\ModelViewer\\ModelViewer\\ModelViewer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zbysl\\source\\repos\\ModelViewer\\ModelViewer\\ModelViewer.csproj",
+        "projectUniqueName": "c:\\Users\\zbysl\\source\\repos\\ModelViewer\\ModelViewer\\ModelViewer.csproj",
         "projectName": "ModelViewer",
-        "projectPath": "C:\\Users\\zbysl\\source\\repos\\ModelViewer\\ModelViewer\\ModelViewer.csproj",
+        "projectPath": "c:\\Users\\zbysl\\source\\repos\\ModelViewer\\ModelViewer\\ModelViewer.csproj",
         "packagesPath": "C:\\Users\\zbysl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zbysl\\source\\repos\\ModelViewer\\ModelViewer\\obj\\",
+        "outputPath": "c:\\Users\\zbysl\\source\\repos\\ModelViewer\\ModelViewer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
