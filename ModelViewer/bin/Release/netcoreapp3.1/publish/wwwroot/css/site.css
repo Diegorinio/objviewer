@@ -1,0 +1,61 @@
+﻿.icon-canvas
+{
+    padding: 10px;
+    display: inherit;
+}
+.file-icon
+{
+    padding:  22px;
+    background-color: aliceblue;
+    width: auto;
+    margin-bottom: 5px;
+    cursor:pointer;
+}
+.file-icon:hover
+{
+    background-color: rgb(221, 238, 253);
+}
+.viewer
+{
+    display:inline-block;
+
+}
+.file-preview-btn
+{
+    float: right;
+    text-decoration: none;
+    background-color: rgb(161, 255, 255);
+    padding: 5px;
+
+}
+.file-preview-btn:hover
+{
+    background-color: rgb(182, 255, 255);
+}
+.file-preview-btn:visited
+{
+    text-decoration:none;
+    color:black;
+}
+.menu, .menu:visited
+{
+    text-decoration: none;
+    padding: 14px;
+    background-color: aqua;
+    color: red;
+}
+
+.menu:hover {
+        background-color: rgb(182, 255, 255);
+}
+
+.btn-file-save
+{
+    background-color:lawngreen;
+    padding:5px;
+    color:white;
+}
+.btn-file-save
+{
+    background-color:greenyellow;
+}
